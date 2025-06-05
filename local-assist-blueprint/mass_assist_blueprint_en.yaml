@@ -117,9 +117,9 @@ blueprint:
               multiline: false
               multiple: true
           default:
-          - (shuffle|play|listen to) [the ](album|ep|record|compilation|single) {media_name}
-            [by [the ](artist|band|group) {artist}] [(in|on|using) [the ]{area_or_player_name}][
-            (with|using) {radio_mode}][.]
+          - (shuffle|play|listen to) [the ](album|ep|record|compilation|single) {media_name}[.]
+            [by [the ](artist|band|group) {artist}[.]] [(in|on|using) [the ]{area_or_player_name}[.]][
+            (with|using) {radio_mode}[.]]
         track_trigger:
           name: Track trigger
           description: The trigger sentences to request a specific track.
@@ -128,8 +128,8 @@ blueprint:
               multiline: false
               multiple: true
           default:
-          - (shuffle|play|listen to) [the ](track|song) {media_name} [by [the ](artist|band|group)
-            {artist}] [(in|on|using) [the ]{area_or_player_name}][ (with|using) {radio_mode}][.]
+          - (shuffle|play|listen to) [the ](track|song) {media_name}[.] [by [the ](artist|band|group)
+            {artist}[.]] [(in|on|using) [the ]{area_or_player_name}[.]][ (with|using) {radio_mode}[.]]
         artist_trigger:
           name: Artist trigger
           description: The trigger sentences to request music from a specific artist.
@@ -138,8 +138,8 @@ blueprint:
               multiline: false
               multiple: true
           default:
-          - (shuffle|play|listen to) [the ](artist|band|group) {media_name} [(in|on|using)
-            [the ]{area_or_player_name}][ (with|using) {radio_mode}][.]
+          - (shuffle|play|listen to) [the ](artist|band|group) {media_name}[.] [(in|on|using)
+            [the ]{area_or_player_name}[.]][ (with|using) {radio_mode}[.]]
         radio_trigger:
           name: Radio trigger
           description: The trigger sentences to request a specific radio station.
@@ -148,8 +148,8 @@ blueprint:
               multiline: false
               multiple: true
           default:
-          - (shuffle|play|listen to) [the ]((radio station)|(radio)|(station)) {media_name}
-            [(in|on|using) [the ]{area_or_player_name}][.]
+          - (shuffle|play|listen to) [the ]((radio station)|(radio)|(station)) {media_name}[.]
+            [(in|on|using) [the ]{area_or_player_name}[.]]
         playlist_trigger:
           name: Playlist trigger
           description: The trigger sentences to request a specific playlist.
@@ -158,8 +158,8 @@ blueprint:
               multiline: false
               multiple: true
           default:
-          - (shuffle|play|listen to) [the ]playlist {media_name} [(in|on|using) [the ]{area_or_player_name}][
-            (with|using) {radio_mode}][.]
+          - (shuffle|play|listen to) [the ]playlist {media_name}[.] [(in|on|using) [the ]{area_or_player_name}[.]][
+            (with|using) {radio_mode}[.]]
         response_input:
           name: Response for Assist
           description: The response which will be given by Assist.

@@ -221,16 +221,16 @@ actions:
   data: 
     config_entry_id: 01JTR6M10YR9G5DFVXQ5C06EQ5
     limit: 1
-    name: '{{ dict(action_data.items() | selectattr(''1'')) }}'
-    media_type: '{{ dict(action_data.items() | selectattr(''2'')) }}'
-    artist: '{{ dict(action_data.items() | selectattr(''3'')) }}'
+    name: '{{ trigger.slots.media_name }}'
+    media_type: '{{ ''radio'' if ''radio'' in media_name | lower else trigger_id }}'
+    artist: '{{ trigger.slots.artist | default }}'
   response_variable: playback_media
 - alias: Send media to selected Music Assistant Player
   action: music_assistant.play_media
   data: 
     media_id: '{{ playback_media.tracks[0].name }}'
     artist: '{{ playback_media.tracks[0].artists[0].name }}'
-    media_type: '{{ dict(action_data.items() | selectattr(''2'')) }}'
+    media_type: '{{ ''radio'' if ''radio'' in media_name | lower else trigger_id }}'
     enqueue: replace
   target:
     entity_id: '{{ mass_player_entity_id }}'
